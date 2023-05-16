@@ -30,7 +30,7 @@ if ((currentTime) => 12 && currentTime < 6) {
 ReactDOM.render(
   //Apply the "heading" style in the styles.css
   <div>
-    <h1 style={customStyle}>{greeting}</h1>
+    <h1 className="heading" style={customStyle}>{greeting}</h1>
   </div>,
   document.getElementById("root")
 );
