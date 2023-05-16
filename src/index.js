@@ -5,10 +5,8 @@ import ReactDOM from "react-dom";
 const current = new Date();
 const currentTime = current.toLocaleTimeString("UTC");
 
-const heading = {
-  fontSize: "50px",
-  fontWeight: "bold",
-  borderBottom: "5px solid black"
+const customStyle = {
+  color: "red",
 };
 
 let greeting;
@@ -18,21 +16,21 @@ let greeting;
 
 if (currentTime < 12) {
   greeting = "Good morning!";
-  heading.color = "#B3C890";
+  customStyle.color = "#B3C890";
 }
 if ((currentTime) => 12 && currentTime < 6) {
   greeting = "Good Afternoon!";
-  heading.color = "#1B9C85";
+  customStyle.color = "#1B9C85";
   //or "Good evening" if between 6PM and midnight.
 } else {
   greeting = "Good Night!";
-  heading.color = "#FEA1A1";
+  customStyle.color = "#FEA1A1";
 }
 
 ReactDOM.render(
   //Apply the "heading" style in the styles.css
   <div>
-    <h1 style={heading}>{greeting}</h1>
+    <h1 style={customStyle}>{greeting}</h1>
   </div>,
   document.getElementById("root")
 );
